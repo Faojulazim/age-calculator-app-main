@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body
+    class="font-Poppins min-h-[100vh] bg-LightGrey px-5 flex items-center justify-center"
+  >
+    <div
+      class="max-w-[750px] w-full bg-white px-6 py-12 rounded-l-3xl rounded-br-[6rem] rounded-tr-3xl ftf:rounded-br-[8rem] sm:rounded-br-[10rem] sm:px-12"
+    >
+      <form>
+        <div class="flex pb-16 gap-x-3 ftf:gap-x-5 max-w-[500px] sm:gap-x-7">
+          <div class="flex flex-col">
+            <label
+              class="uppercase tracking-[2px] text-[15px] font-[700] text-SmokeyGrey"
+              for="day"
+              >Day</label
+            >
+            <input
+              type="number"
+              placeholder="DD"
+              id="day"
+              class="outline-none border border-LightGrey w-full px-5 font-[700] rounded-md py-3 sm:py-2 ftf:text-xl mt-1 sm:text-[32px]"
+            />
+            <p class="text-LightRed text-[12px] mt-2 hidden" data-para="">
+              The field is empty
+            </p>
+          </div>
+
+          <div class="flex flex-col">
+            <label
+              class="uppercase tracking-[2px] text-[15px] font-[700] text-SmokeyGrey"
+              for="year"
+              >MONTH</label
+            >
+            <input
+              type="number"
+              placeholder="MM"
+              id="month"
+              class="outline-none border border-LightGrey w-full px-5 font-[700] rounded-md py-3 sm:py-2 ftf:text-xl mt-1 sm:text-[32px]"
+            />
+            <p class="text-LightRed text-[12px] mt-2 hidden" data-para="">
+              The field is empty
+            </p>
+          </div>
+          <div class="flex flex-col">
+            <label
+              class="uppercase tracking-[2px] text-[15px] font-[700] text-SmokeyGrey"
+              for="year"
+              >Year</label
+            >
+            <input
+              type="number"
+              id="year"
+              placeholder="YYYY"
+              class="outline-none border border-LightGrey w-full px-5 font-[700] rounded-md py-3 sm:py-2 ftf:text-xl sm:text-[32px] mt-1"
+            />
+            <p class="text-LightRed text-[12px] mt-2 hidden" data-para="">
+              The field is empty
+            </p>
+          </div>
+        </div>
+        <div class="w-full bg-LightGrey h-[2px] relative">
+          <button
+            class="bg-Purple p-5 rounded-full absolute translate-y-[-50%] left-[50%] sm:left-0 translate-x-[-50%] sm:translate-x-0 sm:left-[auto] sm:right-0 cursor-pointer"
+            id="arrow"
+          >
+            <img
+              class="w-[25px] sm:w-[40px]"
+              src="assets/images/icon-arrow.svg"
+              alt=""
+            />
+          </button>
+        </div>
+      </form>
+      <div class="mt-[4rem] sm:mt-[3.5rem]">
+        <div
+          class="flex flex-col gap-y-[6px] font-[800] italic text-5xl ftf:text-6xl sm:text-[4.5rem] md:text-[5.5rem]"
+        >
+          <h1 class="flex items-center">
+            <span
+              class="text-Purple sm:tracking-[12px] mr-1"
+              id="years"
+              data-span=""
+              >--</span
+            >years
+          </h1>
+          <h1 class="flex items-center">
+            <span
+              class="text-Purple sm:tracking-[12px] mr-1"
+              id="months"
+              data-span=""
+              >--</span
+            >months
+          </h1>
+          <h1 class="flex items-center">
+            <span
+              class="text-Purple sm:tracking-[12px] mr-1"
+              id="days"
+              data-span=""
+              >--</span
+            >days
+          </h1>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
